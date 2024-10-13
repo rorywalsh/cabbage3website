@@ -1,0 +1,66 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: rgb(50, 160, 239);
+  /* --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e; */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* --ifm-color-primary: #25c2a0; */
+  /* --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf; */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* In src/css/custom.css */
+.hero__banner {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Set a max width to increase its size */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Center the image and add vertical space */
+  display: block; /* Ensure it behaves as a block element */
+}
+
+/* Change navbar background color */
+.navbar {
+  background-color: rgb(40, 125, 198); /* Your custom color */
+  
+}
+
+/* Change the text color of the active header link */
+.navbar__link {
+  color: #ffffff; /* Example color for header text */
+}
+
+.navbar__items {
+  padding-left: 15%; /*Adjust as needed */
+  padding-right: 15%; /* Adjust as needed */
+}
+
+.navbar__item {
+  margin-left: 20px; /* Change this value to adjust the spacing */
+}
+
+.code-block {
+  background-color: #741818;
+  color: #333;
+  padding: 16px;
+}
+

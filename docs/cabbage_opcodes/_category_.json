@@ -1,0 +1,8 @@
+{
+    "label": "Cabbage Opcodes",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "Cabbage specific opcodes."
+    }
+  }
