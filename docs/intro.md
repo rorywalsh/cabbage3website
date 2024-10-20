@@ -3,11 +3,15 @@ sidebar_position: 1
 ---
 
 # Introduction
-Cabbage is a software for prototyping and developing audio instruments with the Csound audio synthesis language. Instrument development and prototyping is carried out with the main Cabbage IDE. Users write and compile Csound code in a code editor. If one wishes one can also create a graphical frontend, although this is no longer a requirement for Cabbage. Any Csound file can be run with Cabbage, regardless of whether or not it has a graphical interface. Cabbage is designed for realtime processing in mind. It is possible to use Cabbage to run Csound in the more traditional score-driven way, but your success may vary.
+Cabbage is a powerful software platform designed for prototyping and developing audio instruments using the Csound audio synthesis language. It allows sound designers and developers to create custom instruments and audio effects through an intuitive and flexible workflow. By leveraging a Visual Studio Code extension, users can easily design and refine their audio projects within a modern coding environment.
 
-Cabbage is a 'host' application. It treats each and every Csound instruments as a unique audio plugin, which gets added to a digital audio graph (DAG) once it is compiled. The graph can be opened and edited at any point during a performance. If one wishes to use one of their Csound instruments in another audio plugin host, such as Reaper, Live, Bitwig, Ardour, QTractor, etc, they can export the instrument through the 'Export instrument' option.
+One of the key features of Cabbage is its drag-and-drop UI editor, which, alongside a comprehensive library of commonly used widgets, enables rapid development of both simple and complex instruments. This editor provides a visual approach to interface design, making it easier to arrange controls such as sliders, buttons, and other interactive elements without the need to write extensive code from scratch.
 
-# Using these docs
-The following pages will take you through the basic using of Cabbage; from navigating features of the main development environment to exporting VST plugins. If you wish to start making sounds straight away, navigate to the First synth page and start there. If you wish to learn more about Cabbage and its features, visit the Using Cabbage page. If you are curious about Csound and wish to learn more visit the Beginners section.
+Cabbage's user interface is built using webview components, giving users the flexibility to develop custom UIs using popular JavaScript frameworks like React, Vue, or Angular. While Cabbage’s built-in widgets are implemented with standard vanilla JavaScript and HTML, these can be easily extended or customized to meet specific project needs, offering great versatility for more advanced developers.
 
-A reference section for all the available GUI widgets is available from the menu on the right. This reference manual can be launched directly from the Cabbage code editor.
+Once an instrument is developed, Cabbage allows you to export it in various plugin formats (such as VST, AU, or AAX), making it compatible with industry-standard Digital Audio Workstations (DAWs) like Reaper, Ableton Live, Bitwig, and FL Studio. This provides a seamless workflow for developers who want to bring their creations into professional music production environments.
+
+# Using These Docs
+The following documentation will guide you through the fundamental aspects of using Cabbage, from navigating the main features of the development environment to exporting your audio instruments as VST plugins. You’ll also find a comprehensive reference section that covers all of the available GUI widgets. This reference can be accessed from the menu on the right, and it provides detailed information on each widget's properties and use cases.
+
+For quick access, the reference manual is also integrated into the Cabbage code editor, allowing you to consult it without leaving your development workflow. Whether you're just starting with Cabbage or looking to expand your knowledge, these docs will serve as a valuable resource for every stage of your audio instrument development process.

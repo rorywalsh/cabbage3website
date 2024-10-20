@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 /**
  * Creating a sidebar enables you to:
@@ -17,25 +17,32 @@ const sidebars: SidebarsConfig = {
   // But you can create a sidebar manually
 
   docSidebar: [
-    'intro', 
+    'intro',
+    // {
+    //   type: 'category',
+    //   label: 'Beginners',
+    //   items: ['beginners/csound_intro'],
+    // },
     {
       type: 'category',
-      label: 'Beginners',
-      items: ['beginners/csound_intro'],
-    },   
-    {
-      type: 'category', 
       label: 'Widgets',
       items: ['cabbage_widgets/intro',
-        'cabbage_widgets/button'],
-    },  
+        'cabbage_widgets/button',
+        'cabbage_widgets/combobox',
+        'cabbage_widgets/keyboard',
+        'cabbage_widgets/optionButton',
+        'cabbage_widgets/horizontalSlider',
+        'cabbage_widgets/verticalSlider',
+        'cabbage_widgets/rotarySlider'],
+    },
     {
-      type: 'category', 
+      type: 'category',
       label: 'Opcodes',
       items: ['cabbage_opcodes/intro',
+        'cabbage_opcodes/cabbageDump',
         'cabbage_opcodes/cabbageGetValue',
-      'cabbage_opcodes/cabbageGet'],
-    }, 
+        'cabbage_opcodes/cabbageGet'],
+    },
   ],
 
 };

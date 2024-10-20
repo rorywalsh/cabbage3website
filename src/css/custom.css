@@ -64,3 +64,8 @@
   padding: 16px;
 }
 
+.anchor-target {
+  scroll-margin-top: 80px;
+  padding-top: 80px;
+  margin-top: -80px;
+}

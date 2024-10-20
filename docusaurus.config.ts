@@ -84,6 +84,8 @@ const config: Config = {
           position: 'right',
           label: 'Docs',
         },
+        { href: 'https://forum.cabbageaudio.com', label: 'Forum', position: 'right' },
+
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

@@ -1,9 +1,8 @@
 ```json
 "channel": "chan"
 ```
-or `"channel":["chan1", "chan2"]` in the case of widgets that accept two channels such as xypad, soundfiler and range widgets. `channel()` accepts a string/s that names the channel/s that Cabbage will communicate with Csound on. The current value of this widget can be retrieved in Csound using a `chnget`, or a `cabbageGetValue` opcode. Its value can be set using the `cabbageSet`, or `cabbageSetValue` opcodes. `hrange`, `vrange`, `xypad`, and `soundfiler` all take two channels:
-hrange, vrange : `"channel":["min", "max"]` - min and max values
-xypad : `"channel":["x", "y"]` - x and y values
+
+The unique channel name associated with a widget/component. This unique name is used to get and set widget properties. 
 
 > In Cabbage 3, channels don't need to start with a letter, and white spaces are permitted. 
  

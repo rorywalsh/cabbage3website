@@ -1,118 +1,74 @@
-import Fontcolouroff from "./properties/fontColourOff.mdx";
+import Fontcolour from "./properties/fontColour.mdx";
 import Channel from "./properties/channel.mdx";
 import Automatable from "./properties/automatable.mdx";
-import ColourOnOff from "./properties/colourOnOff.mdx";
-import Alpha from "./properties/alpha.mdx";
+import Colour from "./properties/colour.mdx";
+import Opacity from "./properties/opacity.mdx";
 import Value from "./properties/value.mdx";
-import Tofront from "./properties/toFront.mdx";
 import Bounds from "./properties/bounds.mdx";
 import Rotate from "./properties/rotate.mdx";
 import Visible from "./properties/visible.mdx";
-import Imgfile from "./properties/imgFile.mdx";
 import Active from "./properties/active.mdx";
-import Radiogroup from "./properties/radioGroup.mdx";
-import Latched from "./properties/latched.mdx";
 import Corners from "./properties/corners.mdx";
 import Text from "./properties/text.mdx";
-import Presetignore from "./properties/presetIgnore.mdx";
-import Outlinethickness from "./properties/outlineThickness.mdx";
-import Outlinecolour from "./properties/outlineColour.mdx";
+import Stroke from "./properties/stroke.mdx";
 
 # Button
 
-Button creates a button on screen that can be used for a whole range of different tasks. The "channel" string identifies the channel on which Cabbage will communicate with Csound. "OnCaption" and "OffCaption" determine the strings that will appear on the button as users toggle between two states, i.e., 0 or 1. By default these captions are set to "On" and "Off" but the user can specify any strings they wish. 
+Button creates a button on screen that can be used for a whole range of tasks. The "channel" string identifies the channel on which Cabbage will communicate with Csound. The on and off text strings determine the text that will appear on the button as users toggle between two states, i.e., 0 or 1. By default these captions are set to "On" and "Off" but the user can specify any strings they wish. 
+
+# List of supported properties
+[Active](#active) | [Automatable](#automatable) | [Bounds](#bounds) | [Channel](#channel) | [Colour](#colour) | [Corners](#corners) | [Opacity](#opacity) | [Rotate](#rotate) | [Stroke](#stroke) | [Text](#text) | [Value](#value) | [Visible](#visible)
 
 
-## Syntax
-```json
-{
-  "type": "button",
-  "bounds": {
-    "x": 0,
-    "y": 0,
-    "width": 100,
-    "height": 100
-  },
-  "channel": "chan",
-  "latched": 1,
-  "active": 0,
-  "alpha": 1,
-  "automatable": 1,
-  "corners": 5,
-  "colour": {
-    "on":"colour",
-    "off":"colour"
-  },
-  "fontColour":{
-    "on":"colour",
-    "off":"colour"   
-  }, 
-  "outlineColour": "colour",
-  "outlineThickness": 24,
-  "parent": "val",
-  "popup": 1,
-  "presetIgnore": 0,
-  "radioGroup": 99,
-  "rotate": {
-    "radians": 0,
-    "pivotX": 0,
-    "pivotY": 0
-  },
-  "imgFile": "{\"type\", \"file\"}",
-  "text": "string",
-  "value": 0,
-  "visible": 1,
-  "toFront": 1,
-  "moveBehind": "widgetName",
-  "widgetArray": -99
-}
-```
+### Common Properties
 
-### Specific Identifiers
-
-<Latched />
-
-### Common Identifiers
+<a id="active" class="anchor-target"></a>
+#### Active
 <Active />
 
-<Alpha />
-
+<a id="automatable" class="anchor-target"></a>
+#### Automatable
 <Automatable />
 
+<a id="bounds" class="anchor-target"></a>
+#### Bounds
 <Bounds />
 
-<Caption />
-
+<a id="channel" class="anchor-target"></a>
+#### Channel
 <Channel />
 
+<a id="colour" class="anchor-target"></a>
+#### Colour
+<Colour />
+
+<a id="corners" class="anchor-target"></a>
+#### Corners
 <Corners />
 
-<ColourOnOff />
+<a id="opacity" class="anchor-target"></a>
+#### Opacity
+<Opacity />
 
-<Outlinecolour />
-
-<Outlinethickness />
-
-<Parent />
-
-<Popup />
-
-<Presetignore />
-
-<Radiogroup />
-
+<a id="rotate" class="anchor-target"></a>
+#### Rotate
 <Rotate />
 
-<Imgfile />
+<a id="stroke" class="anchor-target"></a>
+#### Stroke
+<Stroke />
 
+<a id="text" class="anchor-target"></a>
+#### Text
 <Text />
 
+<a id="value" class="anchor-target"></a>
+#### Value
 <Value />
 
+<a id="visible" class="anchor-target"></a>
+#### Visible
 <Visible />
-
-<Tofront />
-
 
 <!--(End of identifiers)/-->
 
@@ -122,19 +78,17 @@ Button creates a button on screen that can be used for a whole range of differen
 ## Example
 
 ```cs
-<Cabbage>
-form caption("Button Example") size(380, 300), guiMode("queue"), , colour(2, 145, 209) pluginId("def1")
-
-button bounds(16, 12, 117, 40) channel("trigger"), text("Start Synth", "Stop Synth"), corners(5)
-button bounds(146, 12, 80, 40) channel("mute"), text("Mute", "Unmute"), corners(5), value(1)
-button bounds(242, 12, 117, 40) channel("toggleFreq"), text("Toggle Freq"), corners(5)
-
-texteditor bounds(17, 69, 341, 208) channel("infoText"), readOnly(1), wrap(1), scrollbars(1)
+<Cabbage>[
+{"type": "form", "caption": "Button Example", "size": {"width": 380.0, "height": 300.0}, "guiMode": "queue", "colour": [2.0, 145.0, 209.0], "pluginId": "def1"},
+{"type": "button", "bounds": {"left": 16.0, "top": 12.0, "width": 117.0, "height": 30.0}, "channel": "trigger", "text": {"off":"Start Synth", "on":"Stop Synth"}, "corners": 2.0},
+{"type": "button", "bounds": {"left": 146.0, "top": 12.0, "width": 80.0, "height": 30.0}, "channel": "mute", "text": {"off": "Unmute", "on": "Mute"}, "corners": 2.0},
+{"type": "button", "bounds": {"left": 240.0, "top": 12.0, "width": 121.0, "height": 30.0}, "channel": "toggleFreq", "text": "Toggle Freq"}
+]
 </Cabbage>
 <CsoundSynthesizer>
 <CsOptions>
 -n -d -+rtmidi=NULL -M0 -m0d 
-</CsOptions>e
+</CsOptions>
 <CsInstruments>
 ; Initialize the global variables. 
 ksmps = 32
@@ -149,9 +103,6 @@ nchnls = 2
 
 instr 1
 
-    SText  = "This instrument shows an example of how buttons can be used in Cabbage. Button will send a 0 or a 1 when they are pressed. Typically you simply test if they have been pressed and do somthing accordingly.\n\n In this example, each time the \"Start Synth\" button is pressed Csound will either enable or disable the Synth instrument. The other two button show how the instrument can be controlled in real time" 
-    cabbageSet "infoText", "text", SText
-
     kVal, kTrig cabbageGetValue "trigger"
 
     if kTrig == 1 then
@@ -165,24 +116,18 @@ instr 1
 endin
 
 instr Synth
-
     prints "Starting Synth"
     kMute cabbageGetValue "mute"
-    a1 oscili .5*kMute, 300*(cabbageGet:k("toggleFreq")+1)
-    outs a1, a1
-    
+    a1 oscili .5*kMute, 300*(cabbageGetValue:k("toggleFreq")+1)
+    outs a1, a1  
 endin
 
                 
 
 </CsInstruments>
 <CsScore>
-;causes Csound to run for about 7000 years...
-f0 z
 ;starts instrument 1 and runs it for a week
 i1 0 z
 </CsScore>
 </CsoundSynthesizer>
-
 ```
-
