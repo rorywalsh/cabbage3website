@@ -78,6 +78,7 @@ const config: Config = {
       items: [
         { to: '/', label: 'Home', position: 'right' },
         { to: '/download', label: 'Download', position: 'right' },
+        { to: '/docs/faqs', label: 'FAQs', position: 'right' },
         {
           type: 'docSidebar',
           sidebarId: 'docSidebar',
@@ -85,7 +86,6 @@ const config: Config = {
           label: 'Docs',
         },
         { href: 'https://forum.cabbageaudio.com', label: 'Forum', position: 'right' },
-
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',

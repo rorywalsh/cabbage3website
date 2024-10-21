@@ -50,8 +50,8 @@
 }
 
 .navbar__items {
-  padding-left: 15%; /*Adjust as needed */
-  padding-right: 15%; /* Adjust as needed */
+  padding-left: 10%; /*Adjust as needed */
+  padding-right: 10%; /* Adjust as needed */
 }
 
 .navbar__item {
@@ -68,4 +68,35 @@
   scroll-margin-top: 80px;
   padding-top: 80px;
   margin-top: -80px;
+}
+
+h1 {
+  font-size: 2rem; /* Change this to the size you want */
+} 
+/* Style for <details> panel with white background */
+/* Style for <details> panel */
+details {
+  background-color: #ffffff !important; /* White background */
+  border: 0px solid rgb(0, 0, 0) !important;    /* Light border */
+  color: #232323 !important;
+}
+
+/* Style for <summary> title */
+summary {
+
+  color: #0057b3 !important;
+  font-size: 1.0rem;
+  background-color: #ffffff;  /* Light grey background */
+  cursor: pointer;            /* Makes the summary clickable */
+  padding: 0px;
+  /* margin: -10px -10px 10px;    Adjusting the margin to align better */
+  list-style: none;           /* Remove default arrow styling */
+}
+
+
+
+
+/* Optional: Style the contents inside the <details> */
+details p {
+  margin-top: 5px; /* Adjust paragraph margin */
 }
