@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Cabbage
 Cabbage is a powerful software platform designed for prototyping and developing audio instruments using the Csound audio synthesis language. It allows sound designers and developers to create custom instruments and audio effects through an intuitive and flexible workflow. By leveraging a Visual Studio Code extension, users can easily design and refine their audio projects within a modern coding environment.
 
 One of the key features of Cabbage is its drag-and-drop UI editor, which, alongside a comprehensive library of commonly used widgets, enables rapid development of both simple and complex instruments. This editor provides a visual approach to interface design, making it easier to arrange controls such as sliders, buttons, and other interactive elements without the need to write extensive code from scratch.

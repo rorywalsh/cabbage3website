@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
 
   docSidebar: [
     'intro',
+    'cabbage3',
     // {
     //   type: 'category',
     //   label: 'Beginners',
