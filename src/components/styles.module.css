@@ -1,0 +1,47 @@
+.testimonials {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  /* background-color: rgb(40, 125, 198); */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center; /* Center the items vertically */
+  width: 100%; /* Full width to allow lines to extend */
+}
+
+.line {
+  flex-grow: 1; /* Allows the line to grow to take up available space */
+  height: 2px; /* Thickness of the line */
+  background: rgb(123, 123, 123); /* Color of the line */
+  margin: 0 15px; /* Space between line and text */
+  margin-bottom: 50px; /* Adjust the value as needed for spacing */
+}
+
+.shortLine {
+  width: 50px; /* Adjust the width as needed */
+  height: 2px; /* Thickness of the line */
+  background-color: rgb(189, 189, 189); /* Color of the line */
+  margin: 10px auto; /* Center the line with automatic margins */
+}
+
+.headingText {
+  color: rgb(43, 43, 43); /* Ensure text color is white */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin-bottom: 50px; /* Adjust the value as needed for spacing */
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
