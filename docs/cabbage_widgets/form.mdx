@@ -1,57 +1,14 @@
 import Pluginid from "./properties/pluginId.mdx";
-import Import from "./properties/import.mdx";
-import Autoupdate from "./properties/autoUpdate.mdx";
-import Typeface from "./properties/typeface.mdx";
-import Bundle from "./properties/bundle.mdx";
-import Guirefresh from "./properties/guiRefresh.mdx";
-import Guimode from "./properties/guiMode.mdx";
-import Titlebarcolour from "./properties/titleBarColour.mdx";
-import Sidechain from "./properties/sideChain.mdx";
-import Opcodedir from "./properties/opcodeDir.mdx";
 import Caption from "./properties/caption.mdx";
-import Fontcolour from "./properties/fontColour.mdx";
-import Latency from "./properties/latency.mdx";
 import Size from "./properties/size.mdx";
 import Colour from "./properties/colour.mdx";
-import Style from "./properties/style.mdx";
 
 # Form
 
-Form creates the main application window. pluginId() is the only required identifier. The default values for size are 600x300. Form identifiers are mostly static apart from `latency()` which can be updated dynamically. 
+`form` creates the main application window. `pluginId` is the only required property, while `caption` will only be used when running an instrument as a standalone. The default values for size are 600x300. There can only be one form per instrument, and it has the unique channel name of `MainForm`.
 
-## Syntax
-```json
-{
-  "type": "form",
-  "bounds": "12, 20, 352, 228",
-  "channel": "infoText",
-  "caption": "string",
-  "size": {
-    "width": 100,
-    "height": 100
-  },
-  "bundle": [
-    "./folder1",
-    "file2",
-    "etc.."
-  ],
-  "pluginId": "plug",
-  "guiRefresh": 1,
-  "guiMode": "val",
-  "import": [
-    "file1",
-    "file2",
-    "etc.."
-  ],
-  "titleBarColour": "colour",
-  "style": "style",
-  "typeface": "fontFile",
-  "latency": 32,
-  "opcodeDir": "dir",
-  "colour": "colour",
-  "fontColour": "colour"
-}
-```
+# List of supported properties
+[Caption](#caption) | [Size](#size) | [Colour](#colour) | [PluginId](#pluginid)
 
 ### Specific Identifiers
 
@@ -59,47 +16,20 @@ Form creates the main application window. pluginId() is the only required identi
 
 <Size />
 
-<Bundle />
-
 <Pluginid />
-
-<Guirefresh />
-
-<Guimode />
-
-<Import />
-
-<Titlebarcolour />
-
-<Style />
-
-<Sidechain />
-
-<Typeface />
-
-<Latency />
-
-<Autoupdate />
-
-<Opcodedir />
-
 
 ### Common Identifiers
 
 <Colour />
 
-<Fontcolour />
-
 <!--(End of identifiers)/-->
-
 
 ## Example
 <!--(Widget Example)/-->
 ```cs
-<Cabbage>
-form caption("Form Example") size(380, 300), guiMode("queue"), colour(2, 145, 209) pluginId("def1")
-texteditor bounds(12, 20, 352, 228) channel("infoText"), readOnly(1), wrap(1), scrollbars(1)
-</Cabbage>
+<Cabbage>[
+{"type": "form", "caption": "Button Example", "size": {"width": 380.0, "height": 300.0}, "guiMode": "queue", "colour": [2.0, 145.0, 209.0], "pluginId": "def1"}
+]</Cabbage>
 <CsoundSynthesizer>
 <CsOptions>
 -n -d -+rtmidi=NULL -M0 -m0d --midi-key=4 --midi-velocity-amp=5
@@ -118,8 +48,6 @@ nchnls = 2
 
 instr 1
 
-    SText  = "A form represents an instrument plugin window. All widgets are positioned relative to the top left of the form, i.e., position 0,0.\n\nWhen declaring a form, you can also set some useful attributes of your plugin such as the pluginId and plugin delay compensation (latency)."
-    cabbageSet "infoText", "text", SText
 
 endin
 

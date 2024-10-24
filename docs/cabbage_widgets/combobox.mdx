@@ -10,9 +10,9 @@ import Value from "./properties/value.mdx";
 import Visible from "./properties/visible.mdx";
 import Opacity from "./properties/opacity.mdx";
 
-# Combo Box
+# ComboBox
 
-Combobox creates a drop-down list of items which users can choose from. Once the user selects an item, the index of their selection will be sent to Csound on a channel named by the channel string. The default value is 0. The first item in the combobox will be seen as a 0.
+`combobox` creates a drop-down list of items which users can choose from. Once the user selects an item, the index of their selection will be sent to Csound on a channel named by the channel string. The default value is 0. The first item in the combobox will be seen as a 0.
 
 A combobox can also be set up to work with strings. In this case, Csound will receive the currently selected string instead of the current index. Note that using a combobox in this way renders it useless in terms of host automation. Host automation can only be achieved when a combobox is sending the **current** index, rather than the current string.
 
