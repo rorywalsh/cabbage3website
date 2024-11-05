@@ -16,7 +16,7 @@
 .line {
   flex-grow: 1; /* Allows the line to grow to take up available space */
   height: 2px; /* Thickness of the line */
-  background: rgb(123, 123, 123); /* Color of the line */
+  background: rgb(163, 163, 163); /* Color of the line */
   margin: 0 15px; /* Space between line and text */
   margin-bottom: 50px; /* Adjust the value as needed for spacing */
 }
@@ -29,7 +29,7 @@
 }
 
 .headingText {
-  color: rgb(43, 43, 43); /* Ensure text color is white */
+  color: rgb(93,93,93); /* Ensure text color is white */
   white-space: nowrap; /* Prevent text from wrapping */
   margin-bottom: 50px; /* Adjust the value as needed for spacing */
 }

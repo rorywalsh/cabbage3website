@@ -1,10 +1,9 @@
 ```json
 "colour": "colour"
+"colour":{ "on":"colour", "off":"colour" } // button and checkbox
+"colour":{ "fill":"colour", "background":"colour" }  // genTable
 ```
-or
-```json
-"colour":{ "on":"colour", "off":"colour" }
-```
-This sets the main colour. Any CSS or HTML colour string can be passed to this identifier. The colour identifier can also be passed an RBG, or RGBA value. All channel values must be between 0 and 255. For instance colour(0, 0, 255) will create a blue, while colour(0, 255, 0, 255) will create a green with an alpha channel set to full. A single integer value between 0 and 255 will set a grey scale colour.
 
-Some widgets, such as buttons, have two states, on and off. For these widgets you can pass a JSON object with two keys, "on" and "off", each with a value of a CSS or HTML colour string.
+This property sets the main color, which can be any valid CSS or HTML color string. It also accepts hexadecimal, RGB or RGBA values, where each channel ranges from 0 to 255. For example, `"colour":[0, 0, 255]` creates blue, while `"colour":"#ff0000"` generates a red colour.
+
+For widgets with two states, like buttons, you can pass a JSON object with "on" and "off" keys, each containing a color string. `gentable` uses `fill` and `background` colour properties.

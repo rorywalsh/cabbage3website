@@ -63,9 +63,9 @@ function Testimonial({ title, description }: TestimonialItem) {
     <div className={clsx('col col--6')}>
       <div className="text--center padding-horiz--md" style={{ padding: '20px' }}>
         <Heading as="h3" style={{ color: 'rgb(100, 100, 100)', fontStyle: 'italic', fontWeight: 'normal' }}>
-          <i className="fas fa-quote-left" style={{ marginRight: '8px', color: 'lime' }}></i>
+          <i className="fas fa-quote-left" style={{ marginRight: '8px', color: '#93d200' }}></i>
           {title}
-          <i className="fas fa-quote-right" style={{ marginLeft: '8px', color: 'lime' }}></i>
+          <i className="fas fa-quote-right" style={{ marginLeft: '8px', color: '#93d200' }}></i>
         </Heading>
         <div className={styles.shortLine}></div>
         <p style={{ color: 'rgb(20, 20, 20)' }}>{description}</p>

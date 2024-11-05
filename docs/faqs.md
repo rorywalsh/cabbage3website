@@ -11,7 +11,7 @@ description: Frequently Asked Questions about Cabbage
   <p><strong>Head of Cabbage:</strong> Rory Walsh</p>
   <p><strong>Sound Designer:</strong> Iain McCurdy</p>
   <p><strong>Web Developer:</strong> Gordon Boyle</p>
-  <p>Special thanks to Øyvind Brandtsegg, Giorgio Zucco, Dave Phillips, Damien Rennick, fallTx, Andy Filebrown, Keven Walsh, Micah Frank, Victor Lazzarini, Steven Yi, Iain McCurdy, Rafael Gomez and everyone on the Csound, Cabbage, and iPlug2 mailing lists.</p>
+  <p>Special thanks to Øyvind Brandtsegg, Giorgio Zucco, Dave Phillips, Damien Rennick, fallTx, Andy Filebrown, Keven Walsh, Micah Frank, Victor Lazzarini, Steven Yi, Iain McCurdy, Rafael Gomez, Oli Larkin ( creator of iPlug), and everyone on the Csound, Cabbage, and iPlug2 mailing lists.</p>
 </details>
 
 <details>

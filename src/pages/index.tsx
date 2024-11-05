@@ -11,13 +11,15 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{height:'100vh'}}>
       <div className="container"> 
-      <img src='img/cabbage_transparent.svg' alt="Banner Image" className="hero__banner" style={{ paddingTp: '-120px' }}/>
-        <Heading as="h1" className="hero__title" style={{ fontFamily: "'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
-          {siteConfig.title}
-        </Heading>
+      <img src='img/cabbageWithText.svg' alt="Banner Image" className="hero__banner"/>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        {/* Buttons Container */}
+        <div className={styles.buttonContainer}>
+          <Link className={clsx('button button--secondary', styles.button)} to="/link1">Download <i className="fas fa-download"></i> {/* Font Awesome download icon */}</Link>
+          <Link className={clsx('button button--secondary', styles.button)} to="/link2">Forum <i className="fas fa-comments"></i> {/* Font Awesome forum icon */}</Link>
+        </div>
       </div>
     </header>
   );

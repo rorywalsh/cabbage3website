@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
     description: (
       <>
-        Cabbage uses Csound (one of the most powerful and versatile audio programming languages around) for all its audio and MIDI processing.
+        Cabbage uses Csound for all its audio and MIDI processing. Csound is one of the most powerful and versatile audio programming languages ever written and ships with 1000's a opcodes.
       </>
     ),
   },
@@ -229,8 +229,9 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="text--center">
-          <div className={styles.headingWrapper}>
+        <div className="text--center"  style={{ fontSize: '3em', color: '#93d200'}}>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>{}
+            <div className={styles.headingWrapper}>
             <div className={styles.line}></div> {/* Left line */}
             <h2 className={styles.headingText}>F E A T U R E S</h2> {/* Heading text */}
             <div className={styles.line}></div> {/* Right line */}
