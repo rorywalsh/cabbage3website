@@ -3,7 +3,7 @@ name: Deploy Docusaurus Site
 permissions:
   contents: write  # This is essential for pushing changes to the repository.
   pages: write     # Required for deploying to GitHub Pages.
-  
+
 on:
   push:
     branches:
@@ -40,8 +40,10 @@ jobs:
           # Checkout to gh-pages branch
           git checkout -B gh-pages  # This ensures we're on the gh-pages branch, even if it was created remotely
 
+          # Move the contents of the build folder to the root of the branch
+          mv build/* . && rm -rf build
           # Add the build output to git and commit
-          git add -f build/
+          git add --all
           git commit -m "Deploy website"
 
           # Push changes to gh-pages branch
