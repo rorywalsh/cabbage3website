@@ -17,8 +17,8 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         {/* Buttons Container */}
         <div className={styles.buttonContainer}>
-          <Link className={clsx('button button--secondary', styles.button)} to="/link1">Download <i className="fas fa-download"></i> {/* Font Awesome download icon */}</Link>
-          <Link className={clsx('button button--secondary', styles.button)} to="/link2">Forum <i className="fas fa-comments"></i> {/* Font Awesome forum icon */}</Link>
+          <Link className={clsx('button button--secondary', styles.button)} to="/download">Download <i className="fas fa-download"></i> {/* Font Awesome download icon */}</Link>
+          <Link className={clsx('button button--secondary', styles.button)} to="https://forum.cabbageaudio.com/">Forum <i className="fas fa-comments"></i> {/* Font Awesome forum icon */}</Link>
         </div>
       </div>
     </header>
