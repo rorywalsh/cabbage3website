@@ -1,5 +1,9 @@
 name: Deploy Docusaurus Site
 
+permissions:
+  contents: write  # This is essential for pushing changes to the repository.
+  pages: write     # Required for deploying to GitHub Pages.
+  
 on:
   push:
     branches:
