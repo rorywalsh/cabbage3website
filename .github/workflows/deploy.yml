@@ -28,15 +28,19 @@ jobs:
           git config --global user.email "your-email@example.com"
           git config --global user.name "Your Name"
 
-      - name: Deploy to GitHub Pages  
+     - name: Deploy to GitHub Pages
         run: |
-          # Set up Git configuration
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Add build output to the gh-pages branch (force push)
+          # Checkout to gh-pages branch
+          git checkout -B gh-pages  # This ensures we're on the gh-pages branch, even if it was created remotely
+
+          # Add the build output to git and commit
           git add -f build/
           git commit -m "Deploy website"
+
+          # Push changes to gh-pages branch
           git push --force origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
