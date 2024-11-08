@@ -8,11 +8,11 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://rorywalsh.github.io/cabbage3website',
+  url: 'https://rorywalsh.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
+  baseUrl: '/cabbage3website',
+  deploymentBranch: 'gh-pages',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'cabbageaudio', // Usually your GitHub org/user name.
