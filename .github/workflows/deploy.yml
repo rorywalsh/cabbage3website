@@ -1,12 +1,12 @@
-name: Deploy Docusaurus site to GitHub Pages
+name: Deploy Docusaurus Site
 
 on:
   push:
     branches:
-      - main  # Trigger deployment on pushes to the main branch
+      - main  # Trigger deployment on push to the main branch
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Make sure this matches your project's Node.js version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -30,6 +30,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env:
-          GIT_USER: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
+          git add --all
+          git commit -m "Deploy website"
+          git push --force origin gh-pages
