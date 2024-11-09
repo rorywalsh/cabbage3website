@@ -38,7 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/rorywalsh/cabbage3website/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -49,7 +49,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/rorywalsh/cabbage3website/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -87,7 +87,7 @@ const config: Config = {
         },
         { href: 'https://forum.cabbageaudio.com', label: 'Forum', position: 'right' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/rorywalsh/cabbage3website/tree/main/',
           label: 'GitHub',
           position: 'right',
         },
@@ -104,39 +104,9 @@ const config: Config = {
               to: '/docs/intro',
             },
           ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CabbageAudio. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
