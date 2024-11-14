@@ -1,18 +1,18 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React, { useEffect } from 'react';
+import { useHistory } from '@docusaurus/router';
 import Layout from '@theme/Layout';
 
-
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const history = useHistory();
+
+  useEffect(() => {
+    // Redirect to the documentation homepage
+    history.push('/docs/intro'); // Change this to your desired docs page
+  }, [history]);
+
   return (
-    <Layout title="Home" description="Welcome to the Documentation Site">
-      <main>
-        <h1>Welcome to the Docs!</h1>
-        <p>Find all our documentation below.</p>
-        <a href="/docs/intro.mdx">Start reading the documentation</a>
-      </main>
+    <Layout title="Redirecting..." description="Redirecting to documentation...">
+      <div>Redirecting to documentation...</div>
     </Layout>
   );
 }
