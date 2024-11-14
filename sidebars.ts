@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
 
   docSidebar: [
     'intro',
+    'download',
     'cabbage3',
     // {
     //   type: 'category',
@@ -31,6 +32,7 @@ const sidebars: SidebarsConfig = {
         'cabbage_widgets/button',
         'cabbage_widgets/combobox',
         'cabbage_widgets/gentable',
+        'cabbage_widgets/image',
         'cabbage_widgets/keyboard',
         'cabbage_widgets/label',
         'cabbage_widgets/optionButton',

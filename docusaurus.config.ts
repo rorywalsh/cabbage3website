@@ -17,7 +17,6 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'cabbageaudio', // Usually your GitHub org/user name.
   projectName: 'cabbage3', // Usually your repo name.
-
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -28,6 +27,7 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
 
   presets: [
     [
@@ -70,28 +70,8 @@ const config: Config = {
       disableSwitch: true,   // Disable the dark/light mode switch
     },
     navbar: {
-      title: '',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/cabbage_transparent.svg',
-      },
-      items: [
-        { to: '/', label: 'Home', position: 'right' },
-        { to: '/download', label: 'Download', position: 'right' },
-        { to: '/docs/faqs', label: 'FAQs', position: 'right' },
-        {
-          type: 'docSidebar',
-          sidebarId: 'docSidebar',
-          position: 'right',
-          label: 'Docs',
-        },
-        { href: 'https://forum.cabbageaudio.com', label: 'Forum', position: 'right' },
-        {
-          href: 'https://github.com/rorywalsh/cabbage3website/tree/main/',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      hideOnScroll: true, // Hide navbar on scroll
+      items: [] // Empty array hides the navbar
     },
     footer: {
       style: 'dark',
@@ -114,6 +94,28 @@ const config: Config = {
       additionalLanguages: ['csharp'],
     },
   } satisfies Preset.ThemeConfig,
+  // Register the custom plugin
+  plugins: 
+    [
+     // Custom plugin to modify Webpack config
+    function myCustomPlugin(context, options) {
+      return {
+        name: 'custom-webpack-plugin',
+        configureWebpack(config, isServer, utils, content) {
+          return {
+            module: {
+              rules: [
+                {
+                  test: /\.csd$/,
+                  type: 'asset/resource',
+                },
+              ],
+            },
+          };
+        },
+      };
+    },
+  ],
 };
 
 export default config;

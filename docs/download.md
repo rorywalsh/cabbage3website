@@ -1,10 +1,11 @@
 ---
-sidebar_position: 2
+title: Download
+description: Download
 ---
 
-  > **Cabbage 3** and the associated Visual Studio Code extension are currently in ***Alpha*** development. These releases are experimental and may undergo significant changes. 
-  
-  Features are not final, and stability or performance may vary. Use at your own discretion, and expect frequent updates and potential breaking changes.
+> **Cabbage 3** and the associated Visual Studio Code extension are currently in ***Alpha*** development. These releases are experimental and may undergo significant changes. 
+
+Features are not final, and stability or performance may vary. Use at your own discretion, and expect frequent updates and potential breaking changes.
 
 
 Please visit the [Cabbage3 GitHub Actions](https://github.com/rorywalsh/cabbage3/actions) page to download the latest Cabbage binaries. This page provides access to the newest compiled versions, including recent features, improvements, and bug fixes. Ensure you select the appropriate version for your operating system.

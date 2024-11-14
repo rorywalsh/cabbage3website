@@ -49,40 +49,6 @@
   min-width: 120px; /* Set a minimum width for the buttons */
 }
 
-/* Hover effect */
-.button:hover {
-  background-color: rgb(118, 188, 238); /* Darker shade on hover */
-  border-color: rgb(255, 255, 255); /* Change border color on hover */
-}
-
-/* In src/css/custom.css */
-.hero__banner {
-  width: 100%; /* Make the image responsive */
-  max-width: 600px; /* Set a max width to increase its size */
-  height: auto; /* Maintain aspect ratio */
-  margin: 20px auto; /* Center the image and add vertical space */
-  display: block; /* Ensure it behaves as a block element */
-}
-
-/* Change navbar background color */
-.navbar {
-  background-color: rgb(40, 145, 209); /* Your custom color */
-  
-}
-
-/* Change the text color of the active header link */
-.navbar__link {
-  color: #ffffff; /* Example color for header text */
-}
-
-.navbar__items {
-  padding-left: 10%; /*Adjust as needed */
-  padding-right: 10%; /* Adjust as needed */
-}
-
-.navbar__item {
-  margin-left: 20px; /* Change this value to adjust the spacing */
-}
 
 .code-block {
   background-color: #741818;
@@ -94,6 +60,11 @@
   scroll-margin-top: 80px;
   padding-top: 80px;
   margin-top: -80px;
+}
+
+/* Hide the navbar */
+.navbar {
+  display: none !important;
 }
 
 h1 {

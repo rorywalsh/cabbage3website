@@ -9,6 +9,9 @@ import Visible from "./properties/visible.mdx";
 import Active from "./properties/active.mdx";
 import Corners from "./properties/corners.mdx";
 import Text from "./properties/textOnOff.mdx";
+import CodeBlock from '@theme/CodeBlock';
+import widgetCode from '!!raw-loader!../../static/examples/button.csd';
+
 
 # Button
 
@@ -20,106 +23,52 @@ import Text from "./properties/textOnOff.mdx";
 
 ### Common Properties
 
-<a id="active" class="anchor-target"></a>
+<a id="active" className="anchor-target"></a>
 #### Active
 <Active />
 
-<a id="automatable" class="anchor-target"></a>
+<a id="automatable" className="anchor-target"></a>
 #### Automatable
 <Automatable />
 
-<a id="bounds" class="anchor-target"></a>
+<a id="bounds" className="anchor-target"></a>
 #### Bounds
 <Bounds />
 
-<a id="channel" class="anchor-target"></a>
+<a id="channel" className="anchor-target"></a>
 #### Channel
 <Channel />
 
-<a id="colour" class="anchor-target"></a>
+<a id="colour" className="anchor-target"></a>
 #### Colour
 <Colour />
 
-<a id="corners" class="anchor-target"></a>
+<a id="corners" className="anchor-target"></a>
 #### Corners
 <Corners />
 
-<a id="font" class="anchor-target"></a>
+<a id="font" className="anchor-target"></a>
 #### Font
 <Font />
 
-<a id="opacity" class="anchor-target"></a>
+<a id="opacity" className="anchor-target"></a>
 #### Opacity
 <Opacity />
 
-<a id="text" class="anchor-target"></a>
+<a id="text" className="anchor-target"></a>
 #### Text
 <Text />
 
-<a id="value" class="anchor-target"></a>
+<a id="value" className="anchor-target"></a>
 #### Value
 <Value />
 
-<a id="visible" class="anchor-target"></a>
+<a id="visible" className="anchor-target"></a>
 #### Visible
 <Visible />
 
-<!--(End of identifiers)/-->
 
 
 ## Example
 
-```cs
-<Cabbage>[
-{"type": "form", "caption": "Button Example", "size": {"width": 380.0, "height": 300.0}, "guiMode": "queue", "colour": [2.0, 145.0, 209.0], "pluginId": "def1"},
-{"type": "button", "bounds": {"left": 16.0, "top": 12.0, "width": 117.0, "height": 30.0}, "channel": "trigger", "text": {"off":"Start Synth", "on":"Stop Synth"}, "corners": 2.0},
-{"type": "button", "bounds": {"left": 146.0, "top": 12.0, "width": 80.0, "height": 30.0}, "channel": "mute", "text": {"off": "Unmute", "on": "Mute"}, "corners": 2.0},
-{"type": "button", "bounds": {"left": 240.0, "top": 12.0, "width": 121.0, "height": 30.0}, "channel": "toggleFreq", "text": "Toggle Freq"}
-]
-</Cabbage>
-<CsoundSynthesizer>
-<CsOptions>
--n -d -+rtmidi=NULL -M0 -m0d 
-</CsOptions>
-<CsInstruments>
-; Initialize the global variables. 
-ksmps = 32
-nchnls = 2
-0dbfs = 1
-
-; Rory Walsh 2021 
-;
-; License: CC0 1.0 Universal
-; You can copy, modify, and distribute this file, 
-; even for commercial purposes, all without asking permission. 
-
-instr 1
-
-    kVal, kTrig cabbageGetValue "trigger"
-
-    if kTrig == 1 then
-        if kVal == 1 then
-            event "i", "Synth", 0, 3600
-        else
-            turnoff2 nstrnum("Synth"), 0, 0
-        endif
-    endif
-
-endin
-
-instr Synth
-    prints "Starting Synth"
-    kMute cabbageGetValue "mute"
-    a1 oscili .5*kMute, 300*(cabbageGetValue:k("toggleFreq")+1)
-    outs a1, a1  
-endin
-
-                
-
-</CsInstruments>
-<CsScore>
-;starts instrument 1 and runs it for a week
-i1 0 z
-</CsScore>
-</CsoundSynthesizer>
-```
+<CodeBlock language="csharp">{widgetCode}</CodeBlock>
