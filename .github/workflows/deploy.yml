@@ -41,8 +41,8 @@ jobs:
 
           # Add the build output to git and commit
           git add -f build/
-          rm -rf *  # Be careful with this command; make sure you're in the correct branch!
-          cp -R build/* .
+          # rm -rf *  # Be careful with this command; make sure you're in the correct branch!
+          # cp -R build/* .
           git commit -m "Deploy website"
 
           # Push changes to gh-pages branch
