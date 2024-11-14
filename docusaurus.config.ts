@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://rorywalsh.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/cabbage3website/build/',
+  baseUrl: '/cabbage3website/docs/intro/',
   deploymentBranch: 'gh-pages',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
