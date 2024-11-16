@@ -24,11 +24,6 @@ const sidebars: SidebarsConfig = {
       id: 'download',
     },
     'cabbage3',
-    // {
-    //   type: 'category',
-    //   label: 'Beginners',
-    //   items: ['beginners/csound_intro'],
-    // },
     {
       type: 'category',
       label: 'Widgets',
@@ -44,6 +39,11 @@ const sidebars: SidebarsConfig = {
         'cabbage_widgets/horizontalSlider',
         'cabbage_widgets/verticalSlider',
         'cabbage_widgets/rotarySlider'],
+    },
+    {
+      type: 'doc',
+      label: "Custom User Interfaces",
+      id: 'customUIs',
     },
     {
       type: 'category',
