@@ -58,6 +58,62 @@ instr TestMYFLTSetOpcodes
     endif
 endin
 
+instr TestMYFLTGetOpcodes
+    k1 metro 2
+    if p4 == 0 then
+        SText cabbageGet "infoText", "text"
+        prints SText
+    elseif p4 == 1 then
+        SText cabbageGet "button1", "text.off"
+        prints SText
+    elseif p4 == 2 then
+        iWidth cabbageGet "infoText", "bounds.width"
+        print iWidth
+    elseif p4 == 3 then
+        kWidth cabbageGet "infoText", "bounds.width"
+        printf "bounds.width: %d", k1, kWidth
+    elseif p4 == 4 then
+        kVisible cabbageGet "infoText", "visible"
+        printf "visible: %d", k1, kVisible
+    elseif p4 == 5 then
+        //update text and check for changes
+        event_i "i", "UpdateText", 0.1, 0
+        SText, kTrigger cabbageGet "infoText", "text"
+        printf "text: %s", kTrigger, SText
+    elseif p4 == 6 then
+        cabbageSet "gain", "colour", "#ff0000"
+    elseif p4 == 7 then
+        cabbageSet "combo1", "items", "1One", "2Two", "3Three", "4Four"
+    endif
+endin
+
+instr TestGetValueOpcodes
+    if p4 == 0 then
+        prints "Testing cabbageGetValue k-rate, no trigger"
+        kVal cabbageGetValue "gain"
+        printk2 kVal
+    elseif p4 == 1 then
+        prints "Testing cabbageGetValue k-rate, with trigger"
+        kVal, kTrig cabbageGetValue "gain"
+        printf "gain: %f", kTrig, kVal
+    endif    
+endin
+
+instr TestSetValueOpcodes
+    if p4 == 0 then
+        prints "Testing cabbageSetValue i-rate"
+        cabbageSetValue "gain", 2
+    elseif p4 == 1 then
+        prints "Testing cabbageSetValue k-rate"
+        cabbageSetValue "gain", abs(randi:k(1, 10))
+    endif
+endin
+
+
+instr UpdateText
+    cabbageSet "infoText", "text", "This text has been updated" 
+endin
+
 
 </CsInstruments>  
 <CsScore>
@@ -68,6 +124,24 @@ i"TestStringSetOpcodes" + 1 3
 i"TestStringSetOpcodes" + 1 4
 i"TestStringSetOpcodes" + 1 5
 i"TestStringSetOpcodes" + 1 6
+
+
+; i"TestMYFLTSetOpcodes" + 2 0
+; i"TestMYFLTSetOpcodes" + 2 1
+; i"TestMYFLTSetOpcodes" + 1 2
+; i"TestMYFLTSetOpcodes" + 1 3
+; i"TestMYFLTSetOpcodes" + 1 4
+
+; i"TestMYFLTGetOpcodes" + 1 0
+; i"TestMYFLTGetOpcodes" + 1 1
+; i"TestMYFLTGetOpcodes" + 1 2
+; i"TestMYFLTGetOpcodes" + 1 3
+; i"TestMYFLTGetOpcodes" + 1 4
+; i"TestMYFLTGetOpcodes" + 1 5
+; i"TestSetValueOpcodes" + 2 0
+; i"TestSetValueOpcodes" + 4 1
+; i"TestGetValueOpcodes" + 4 0
+; i"TestGetValueOpcodes" + 4 1
 f0 z
 </CsScore>
 </CsoundSynthesizer>

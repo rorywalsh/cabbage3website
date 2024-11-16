@@ -1,28 +1,24 @@
-# CabbageGet
+# CabbageSet
 
-This opcode queries the current value of a widget property, i.e,`colour`, `bounds.top`, `height`, etc. It can run at init-time or k-time and includes an optional output argument that triggers a value of 1 for one k-cycle whenever the widget value is updated or changed.
+This opcode set a widget property, i.e,`colour.fill`, `visible`, `opacity`, etc. It can run at init-time or k-time. The k-time variant must use a trigger to initiate the update. 
 
 ## Syntax
 
-*kValue* **cabbageGet** *SChannel*, *SProperty*
+**cabbageSet** *SChannel*, *SProperty*, *iValue*
+**cabbageSet** *SChannel*, *SProperty*, *SValue*
+**cabbageSet** *kTrig*, *SChannel*, *SProperty*, *SValue*
+**cabbageSet** *kTrig*, *SChannel*, *SProperty*, *kValue*
 
-*iValue* **cabbageGet** *SChannel*, *SProperty*
-
-*SValue* **cabbageGet** *SChannel*, *SProperty*
-
-*kValue [, kTrig]* **cabbageGet** *SChannel*, *SProperty*
-
-*SValue [, kTrig]* **cabbageGet** *SChannel*, *SProperty*
 
 ### Initialization
 * *SChannel* – the name of the channel to query
 * *SProperty* - the property you wish to access. If the property is part of a JSON object, such as `"bounds:{"left":0}` you can use dot notation, i.e., "bounds.left"
-* *iValue* - the current value of the widget at init-time
+* *iValue* - the updated property value 
 
 ### Performance
-* *kValue* - the current value of the widget property
-* *SValue* - the current string value of the widget property
-* *kTrig* - a trigger signal that will return 1 for a single k-cycle whenever the value has been updated/changed
+* *kValue* - the updated property value 
+* *SValue* - the updated property value 
+* *kTrig* - when this is 1 the update will be sent to the UI element. You should avoid updating the UI on every cycle as a it is a needless waste of resources. 
 
 ## Example:
 

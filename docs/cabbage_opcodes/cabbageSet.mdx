@@ -1,0 +1,29 @@
+import CodeBlock from '@theme/CodeBlock';
+import widgetCode from '!!raw-loader!../../static/examples/cabbageSet.csd';
+
+# CabbageSet
+
+This opcode set a widget property, i.e,`colour.fill`, `visible`, `opacity`, etc. It can run at init-time or k-time. The k-time variant must use a trigger to initiate the update. 
+
+## Syntax
+
+**cabbageSet** *SChannel*, *SProperty*, *iValue*
+**cabbageSet** *SChannel*, *SProperty*, *SValue*
+**cabbageSet** *kTrig*, *SChannel*, *SProperty*, *SValue*
+**cabbageSet** *kTrig*, *SChannel*, *SProperty*, *kValue*
+
+
+### Initialization
+* *SChannel* – the name of the channel to query
+* *SProperty* - the property you wish to access. If the property is part of a JSON object, such as `"bounds:{"left":0}` you can use dot notation, i.e., "bounds.left"
+* *iValue* - the current value of the widget at init-time
+
+### Performance
+* *kValue* - the current value of the widget property
+* *SValue* - the current string value of the widget property
+* *kTrig* - a trigger signal that will return 1 for a single k-cycle whenever the value has been updated/changed
+
+## Example
+
+<CodeBlock language="csharp">{widgetCode}</CodeBlock>
+

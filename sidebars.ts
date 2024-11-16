@@ -18,7 +18,11 @@ const sidebars: SidebarsConfig = {
 
   docSidebar: [
     'intro',
-    'download',
+    {
+      type: 'doc',
+      label: "Download and Install",
+      id: 'download',
+    },
     'cabbage3',
     // {
     //   type: 'category',
@@ -32,6 +36,7 @@ const sidebars: SidebarsConfig = {
         'cabbage_widgets/button',
         'cabbage_widgets/combobox',
         'cabbage_widgets/gentable',
+        'cabbage_widgets/groupbox',
         'cabbage_widgets/image',
         'cabbage_widgets/keyboard',
         'cabbage_widgets/label',
@@ -46,7 +51,8 @@ const sidebars: SidebarsConfig = {
       items: ['cabbage_opcodes/intro',
         'cabbage_opcodes/cabbageDump',
         'cabbage_opcodes/cabbageGetValue',
-        'cabbage_opcodes/cabbageGet'],
+        'cabbage_opcodes/cabbageGet',
+        'cabbage_opcodes/cabbageSet'],
     },
   ],
 
