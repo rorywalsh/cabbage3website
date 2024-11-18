@@ -27,7 +27,7 @@ Cabbage 3 includes a variety of standard plugin controls such as sliders and but
 
         * Define a **`getInnerHTML()`** method. This method should return the inner HTML used to render the UI element. The element’s size is determined by its bounds object. You can return an svg element or another div element, depending on your design needs.
 
-    * Add class to the Cabbage `src/cabbage/widgets` directory. This is installed with the VS Code extension. On MacOS it can be found here in `~/.vscode/extensions`, and on Windows it can be found in `%USERPROFILE%\.vscode\extensions`, where `%USERPROFILE%` is typically `C:\Users\your-username`. When in place, both the VS Code extension and the Cabbage service app will be able to access them. 
+    * Add class to the Cabbage `src/cabbage/widgets` directory. This is installed with the VS Code extension. On MacOS it can be found here in `~/.vscode/extensions`, and on Windows it can be found in `%USERPROFILE%\.vscode\extensions`, where `%USERPROFILE%` is typically `C:\Users\your-username`. When in place, both the VS Code extension and the Cabbage service app will be able to access them. These source files get copied whenever Cabbage export a new plugin.  
 
 2. ## **Entirely new web-based interfaces**
 

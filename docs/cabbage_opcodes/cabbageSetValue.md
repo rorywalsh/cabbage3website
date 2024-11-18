@@ -1,10 +1,13 @@
+import CodeBlock from '@theme/CodeBlock';
+import widgetCode from '!!raw-loader!../../static/examples/cabbageSet.csd';
+
 # CabbageSetValue
 
 This opcode set the current value of a widget. It can run at init-time or k-time. 
 
 ## Syntax
 
-**cabbageSetValue** *SChannel*, *kValue* 
+**cabbageSetValue** *SChannel*, *kValue* [, *kTrigger*] 
 **cabbageSetValue** *SChannel*, *iValue* 
 
 
@@ -14,6 +17,7 @@ This opcode set the current value of a widget. It can run at init-time or k-time
 
 ### Performance
 * *kValue* - the value to set the widget too
+* *kTrigger* - a signal used to trigger a value update 
 
 
 ## Example:
