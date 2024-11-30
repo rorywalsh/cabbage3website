@@ -25,6 +25,11 @@ const sidebars: SidebarsConfig = {
     },
     'cabbage3',
     {
+      type: 'doc',
+      label: "Using Cabbage 3",
+      id: 'usingCabbage3',
+    },
+    {
       type: 'category',
       label: 'Widgets',
       items: ['cabbage_widgets/intro',
