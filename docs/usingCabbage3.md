@@ -5,6 +5,8 @@ description: Using Cabbage 3
 
 The Cabbage 3 VS Code Extension offers a seamless workflow for designing and testing instruments directly within Visual Studio Code. It provides full access to Cabbage's robust UI and audio capabilities, allowing developers to create and refine their projects efficiently. Below, you’ll find an overview of its key features, commands, and tips to help you get started.
 
+> The VS Code extension only supports exporting of VST3 effects and synths for now. AU export targets are currently under development.   
+
 ## Table of Contents
 - [Working with your Cabbage instruments](#working-with-your-cabbage-instruments)
 - [List of commands](#list-of-commands)
@@ -14,7 +16,9 @@ The Cabbage 3 VS Code Extension offers a seamless workflow for designing and tes
   - [Exporting](#exporting)
 - [Configuration Properties](#configuration-properties)
 
+
 ## Working with your Cabbage instruments
+
 Once the Cabbage extension is enabled in Visual Studio Code, it will automatically attempt to load any Cabbage 3 instrument definitions in a preview web panel each time you save a .csd file (Unified Csound Document). This live preview allows you to view and interact with the instrument's user interface, giving you immediate feedback on your design.
 
 To access Edit Mode, open the command palette (press Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS) and select the `vscabbage: Enter Edit Mode` command. In Edit Mode, you can adjust widget properties such as dimensions, colors, fonts, and more to customize your instrument's UI. Each modification updates the instrument's Cabbage JSON code in real-time, enabling quick iteration.
@@ -70,10 +74,11 @@ Once the command palette is open, you can start typing the name of the command y
 
 11. **Set Cabbage source path**
     - Opens a dialog to set the path to the Cabbage JS source directory. 
-    > This is set to the extension path by default and should not be overridden unless you know what you are doing!
+    > This is set by the extension and should not be overridden unless you know what you are doing!
 
 12. **Set path to the Cabbage binary**
     - Opens a dialog to set the path to the Cabbage binary executable, that is CabbageApp.app on MacOS and CabbageApp.exe on Windows. 
+    > This is also set by the extension and should not be overridden unless you know what you are doing!
 
 ### Exporting
 
