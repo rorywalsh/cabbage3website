@@ -26,6 +26,17 @@ const sidebars: SidebarsConfig = {
     'cabbage3',
     {
       type: 'category',
+      label: 'Using Cabbage 3',
+      items: [
+        'using_cabbage/overview',
+        'using_cabbage/working_with_instruments',
+        'using_cabbage/commands',
+        'using_cabbage/configuration',
+        'using_cabbage/media_files',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Widgets',
       items: ['cabbage_widgets/intro',
         'cabbage_widgets/button',
