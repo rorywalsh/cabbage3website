@@ -20,15 +20,17 @@ Ctrl+S and Ctrl+E are the default shortcuts for running and entering edit mode. 
 
 Once the command palette is open, you can start typing the name of the command you want to execute. For example, you can type "Cabbage" to filter the commands related to the Cabbage extension. Select the desired command from the list to execute it. Below are the commands currently provided. 
 
+> It's very simple to assign custom shortcuts to any command palette entry. Simple summon the command, then press the small cogwheel icon that appears on the right of the command. This will bring up a config screen where you can quickly set your preferred shortcuts.  
+
 ## Commands
 
 ### Running
 
 - **Launch Cabbage**
-  - Hitting save (Ctrl+S) on any .csd file that contains a valid Cabbage JSON section will launch the instrument UI in a new tab.
+  - The `Compile Instrument` command can be called from the command palette. Each time it is called your .csd file will be saved to disk, and if it contains a valid Cabbage JSON section the instrument will launch is a dedicated tab.
 
 - **Edit Mode**
-  - Toggles the edit mode for the Cabbage interface (Ctrl+E when an instrument UI has focus). When in edit mode users can right-click to show the context menu, whereupon they can select a widget to add to the UI.
+  - `Edit Mode` enabled edit mode for the Cabbage interface. When in edit mode users can right-click to show the context menu, whereupon they can select a widget to add to the UI. Clicking on an existing widget will being up its properties panel.
 
 ### Formatting
 
