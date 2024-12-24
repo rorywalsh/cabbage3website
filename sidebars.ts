@@ -33,6 +33,7 @@ const sidebars: SidebarsConfig = {
         'using_cabbage/commands',
         'using_cabbage/configuration',
         'using_cabbage/media_files',
+        'using_cabbage/multichannel'
       ],
     },
     {
