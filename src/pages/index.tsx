@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     // Redirect to the documentation homepage
-    history.push('/cabbage3website/docs/intro'); // Change this to your desired docs page
+    history.push('/cabbage3docs/docs/intro'); // Change this to your desired docs page
   }, [history]);
 
   return (
