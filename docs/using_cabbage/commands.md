@@ -48,6 +48,10 @@ Once the command palette is open, you can start typing the name of the command y
 - **Jump to Widget Object**
   - Provides a dropdown menu of widget objects. Selecting one will cause the text editor to jump that that object. Objects are listed by their channel name. 
 
+- **Open a widget example**
+  - Provides a dropdown list of example widget .csd files. Selecting one will open it in text editor. Any of these files can be run without modification, but they are read-only. If you wish to modify an example you will need to run 'save-as' to make an editable copy. 
+  
+
 ### Configuration
 
 - **Select Sampling Rate**
