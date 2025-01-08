@@ -35,10 +35,13 @@ Once the command palette is open, you can start typing the name of the command y
 ### Formatting
 
 - **Format Document**
-  - Formats the current document according to Cabbage formatting rules.
+  - Formats the current document according to Cabbage formatting rules (this basically).
+
+- **Collapse Cabbage section**
+  - Collapses the Cabbage JSON section in the current document.
 
 - **Expand Cabbage section**
-  - Expands the Cabbage section in the current document for easier editing.
+  - Expands the Cabbage JSON section in the current document.
 
 ### Utilities
 

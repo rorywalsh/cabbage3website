@@ -24,9 +24,9 @@ Cabbage 3 represents a significant overhaul of the previous version, Cabbage 2. 
 
 #### 4. Changes in Identifier Naming and Structure in Cabbage 3
 
-    Another cause of potential frustration in this move is the fact that **camelCase** is now being used across all properties, including widget names. Additionally, abbreviations have been expanded for clarity. For example `rslider` is now changed to `rotarySlider`, `combbox` to `comboBox`, `filebutton` to `fileButton`, etc.
+Another cause of potential frustration in this move is the fact that **camelCase** is now being used across all properties, including widget names. Additionally, abbreviations have been expanded for clarity. For example `rslider` is now changed to `rotarySlider`, `combbox` to `comboBox`, `filebutton` to `fileButton`, etc.
 
-    Also, certain identifier names have been modified. For instance, `outlineWidth` and `outlineColour` are now part of the `stroke` object within the `colour` object:
+Also, certain identifier names have been modified. For instance, `outlineWidth` and `outlineColour` are now part of the `stroke` object within the `colour` object:
 
     ```json
     "colour":{
@@ -36,6 +36,19 @@ Cabbage 3 represents a significant overhaul of the previous version, Cabbage 2. 
         }
     }
 ```
-    Other identifiers have been dropped completely, while some are yet to be implemented. While attempts have been made to provide utility scripts to help transition to Cabbage 3, it's unlikely that any of them will offer a 100% error-free transition from Cabbage 2 to Cabbage 3. Please refer to the updated Docs section to see how widget properties have been changed and updated.
+Other identifiers have been dropped completely, while some are yet to be implemented. While attempts have been made to provide utility scripts to help transition to Cabbage 3, it's unlikely that any of them will offer a 100% error-free transition from Cabbage 2 to Cabbage 3. Please refer to the updated Docs section to see how widget properties have been changed and updated.
 
 In summary, the changes in Cabbage 3, particularly the shift to using JSON objects, mark a significant evolution in how developers interact with the platform. This move aligns Cabbage with contemporary development practices, enhances user experience, and empowers users to build richer, more dynamic applications with greater ease.
+
+#### 5. Exporting instruments
+
+Although the process of exporting has remained largely unchanged, the sequence of events during export has undergone some updates. The most significant change is that all instrument resources are now automatically exported to default folders. All assets, including images, .csd files, and other related resources, will be placed in the following locations:
+
+* MacOS
+    `/Library/CabbageAudio/PLUGIN_NAME/`
+* Windows
+    `C:/ProgramFiles/CabbageAudio/PLUGIN_NAME/`
+
+Cabbage automatically searches these directories when it starts, so it’s essential not to move them to another location.
+
+When sharing plugins, ensure you copy the entire folder along with the plugin binary. On the target machine, restore the folder to its correct location as specified above to ensure proper functionality.
