@@ -8,7 +8,7 @@ description: Download and Install
 
 Cabbage 3 uses Csound7 across all platforms. Here are links to the Windows and MacOS version that Cabbage3 is build with:
 * [MacOS](https://www.dropbox.com/scl/fi/d5hnkcecizlwgvnaw1yjy/csound-7.zip?rlkey=pf9v3ucfo8hecyl5ahbacr0a0&dl=1)
-* [Windows](https://www.dropbox.com/scl/fi/41g11e00yb4v66fduyw3f/Csound7.zip?rlkey=231ot83u6rmnxapwe03krm04z&st=5bzhtada&dl=1)
+* [Windows](https://dl.dropboxusercontent.com/scl/fi/18ppri60nupdrwyo1zt1x/csound-7.exe?rlkey=m6592gt8pfkhvirnl17rbrwfh&st=cml9vetz)
 
 > On MacOS you may need to codesign the Csound executable. To do so, run this command from ther terminal: `codesign -s - /Applications/Csound/CsoundLib64.framework --timestamp --force --deep`
 
