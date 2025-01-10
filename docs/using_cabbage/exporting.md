@@ -10,7 +10,7 @@ While the plugin binary will be saved in the selected location, all associated a
 * MacOS
     `/Library/CabbageAudio/PLUGIN_NAME/`
 * Windows
-    `C:/ProgramFiles/CabbageAudio/PLUGIN_NAME/`
+    `C:/ProgramData/CabbageAudio/PLUGIN_NAME/`
  
 `PLUGIN_NAME` in the folder path will match the name of your exported plugin. It is crucial that the folder name exactly matches the plugin binary name. Cabbage ensures this alignment during the export process, so avoid renaming these folders, as doing so may result in unexpected behavior within Cabbage.
 

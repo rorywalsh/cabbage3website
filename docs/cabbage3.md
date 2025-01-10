@@ -47,7 +47,7 @@ Although the process of exporting has remained largely unchanged, the sequence o
 * MacOS
     `/Library/CabbageAudio/PLUGIN_NAME/`
 * Windows
-    `C:/ProgramFiles/CabbageAudio/PLUGIN_NAME/`
+    `C:/ProgramData/CabbageAudio/PLUGIN_NAME/`
 
 Cabbage automatically searches these directories when it starts, so it’s essential not to move them to another location.
 
