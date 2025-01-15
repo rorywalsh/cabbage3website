@@ -3,25 +3,35 @@ import widgetCode from '!!raw-loader!../../static/examples/cabbageSet.csd';
 
 # CabbageSet
 
-This opcode set a widget property, i.e,`colour.fill`, `visible`, `opacity`, etc. It can run at init-time or k-time. The k-time variant must use a trigger to initiate the update. 
+This opcode sets a widget property, i.e,`colour.fill`, `visible`, `opacity`, etc. It can run at init-time or k-time. The k-time variant must use a trigger to initiate the update (see below). 
 
 ## Syntax
 
 **cabbageSet** *SChannel*, *SProperty*, *iValue*
+
+**cabbageSet** *SChannel*, *SProperty*, *iValue[]*
+
 **cabbageSet** *SChannel*, *SProperty*, *SValue*
+
 **cabbageSet** *kTrig*, *SChannel*, *SProperty*, *SValue*
+
 **cabbageSet** *kTrig*, *SChannel*, *SProperty*, *kValue*
+
+**cabbageSet** *kTrig*, *SChannel*, *SProperty*, *kValue[]*
+
 
 
 ### Initialization
 * *SChannel* – the name of the channel to query
-* *SProperty* - the property you wish to access. If the property is part of a JSON object, such as `"bounds:{"left":0}` you can use dot notation, i.e., "bounds.left"
-* *iValue* - the current value of the widget at init-time
+* *SProperty* - the property you wish to update. If the property is part of a JSON object, such as `"bounds:{"left":0}` you can use dot notation, i.e., "bounds.left"
+* *iValue / iValue[]* - a value to set the widget property to
 
 ### Performance
-* *kValue* - the current value of the widget property
-* *SValue* - the current string value of the widget property
-* *kTrig* - a trigger signal that will return 1 for a single k-cycle whenever the value has been updated/changed
+* *kValue / kValue[]* - a value to set the widget property to
+* *SValue* - a string value to set the widget property to
+* *kTrig* - used to trigger updates at k-rate
+
+> The k-rate variant of `cabbageSet` must use a k-rate trigger to update. This is to prevent the UI from being saturated with updates. If you need to continuously update, use a `metro()` opcode - `cabbageSet metro(5) ...` 
 
 ## Example
 
