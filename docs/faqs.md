@@ -15,5 +15,6 @@ My plugin loads fine, but my custom UI is unresponsive?
 <details> 
 <summary> 
 Something is wrong but I don't know what? 
-</summary> <p>If something is not working as expected, you should enable the <code>verbose logging</code> setting in the extension settings. This will generate an extension log of messages in the Cabbage output console, which may help diagnose the issue. Additionally, you can launch the developer web tools panel via the command palette. The Cabbage UI in VS Code is a web panel—essentially an embedded web page. The developer console allows you to inspect elements and review the console log for errors. Both of these features should help you identify the problem. Once you’ve pinpointed the issue, you can post the logs and relevant information to the Cabbage user forum for further assistance.</p> 
+</summary> 
+<p>If something is not working as expected, you should enable the <code>verbose logging</code> setting in the extension settings. This will generate an extension log of messages in the Cabbage output console, which may help diagnose the issue. Additionally, you can launch the developer web tools panel via the command palette. The Cabbage UI in VS Code is a web panel—essentially an embedded web page. The developer console allows you to inspect elements and review the console log for errors. Both of these features should help you identify the problem. Once you’ve pinpointed the issue, you can post the logs and relevant information to the Cabbage user forum for further assistance.</p> 
 </details>
